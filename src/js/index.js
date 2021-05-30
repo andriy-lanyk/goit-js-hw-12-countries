@@ -12,6 +12,8 @@ const countriesList = document.querySelector('.js-list');
 
 input.addEventListener('input', debounce(chooseCountry, 500));
 
+countriesList.innerHTML = '';
+
 function chooseCountry(e) {
   let searchQuery = e.target.value;
   if (searchQuery.trim() === '') {

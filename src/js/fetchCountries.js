@@ -1,11 +1,13 @@
 import { error } from '@pnotify/core';
 import '@pnotify/core/dist/PNotify.css';
 import '@pnotify/core/dist/BrightTheme.css';
+const countriesList = document.querySelector('.js-list');
 
 export default function fetchCountries(searchQuery) {
   return fetch(`https://restcountries.eu/rest/v2/name/${searchQuery}`)
     .then(response => {
       if (!response.ok) {
+        countriesList.innerHTML = '';
         if (response.status === 404) {
           error({
             text: 'There is no country with such name. Please enter a correct query!',
