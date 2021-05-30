@@ -1,4 +1,5 @@
 import debounce from 'lodash.debounce';
+import countriesList from '..templates/countries-list.hbs';
 import '../sass/main.scss';
 
 import fetchCountries from './fetchCountries.js';
