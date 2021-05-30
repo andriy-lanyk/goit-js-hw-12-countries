@@ -1,6 +1,7 @@
-@import './base/main';
+/*
+ * Главный файл стилей.
+ * Все паршалы подключаются сюда.
+ */
 
-
-@import './utils/main';
-
-@import './components/main';
+// Стили для файла с примером HTML-фрагмента
+@import './example';
